@@ -1,4 +1,4 @@
-Google Gemini-1.5-flash Chat Application
+## Google Gemini-1.5-flash Chat Application
 
 A Streamlit web application that allows users to chat with Google's GenerativeAI (Gemini-1.5-flash). The application enables users to interact with Gemini-1.5-flash in a conversational manner.
 
@@ -40,13 +40,13 @@ To get started with the project, follow the steps below.
 4. Run the application:
 
    ```bash
-   streamlit run app.py
+   streamlit run Chatbot.py
    ```
 
-   The application will be accessible at [http://localhost:8501/](http://localhost:8501/).
+   The application will be accessible at [http://localhost:8504/](http://localhost:8504/).
 
 ## Usage
 
-1. Open your web browser and navigate to [http://localhost:8501/](http://localhost:8501/).
+1. Open your web browser and navigate to [http://localhost:8504/](http://localhost:8504/).
 2. Enter your message in the chat input box.
 3. Chat with Google Gemini-1.5-flash and view the responses in real-time.
