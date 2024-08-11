@@ -2,11 +2,12 @@ import streamlit as st
 import google.generativeai as genai
 
 # Configure the API key
-GOOGLE_API_KEY=  "AIzaSyA6SC9JEIneWVcks_AEuacuF-L49HSt-qo"
+GOOGLE_API_KEY = "AIzaSyAhxWx3LRfWxHHUZ5Hembo-t9U7f2oEJUg"
 genai.configure(api_key=GOOGLE_API_KEY)
+
 # Initialize the Generative Model
-# model = genai.GenerativeModel('gemini-pro')
 model = genai.GenerativeModel('gemini-1.5-flash')
+
 # Function to get response from the model
 def get_chatbot_response(user_input):
     response = model.generate_content(user_input)
@@ -51,13 +52,9 @@ for user_message, bot_message in st.session_state.history:
     </div>
     """, unsafe_allow_html=True)
 
-# user_input = input("Enter your Prompt = ")
-# output = get_chatbot_response(user_input)
-
-# print(output)
-
+# Form for user input
 with st.form(key="chat_form", clear_on_submit=True):
-    user_input = st.text_input("", max_chars=2000)
+    user_input = st.text_input("Type your message here:", max_chars=2000)  # Add a label
     submit_button = st.form_submit_button("Send")
 
     if submit_button:
@@ -65,4 +62,4 @@ with st.form(key="chat_form", clear_on_submit=True):
             response = get_chatbot_response(user_input)
             st.session_state.history.append((user_input, response))
         else:
-            st.warning("Please Enter A Prompt")
+            st.warning("Please enter a prompt")
