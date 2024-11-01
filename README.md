@@ -1,1 +1,1 @@
-# Gemmni Chatbot
+# Gemini Chatbot
